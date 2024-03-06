@@ -16,3 +16,24 @@ h1 {
   font-weight: 600;
   font-size: 3.2rem;
 }
+
+label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  height: 3rem;
+  border: 0.1rem solid $body-color;
+  border-radius: 0.4rem;
+  padding-left: 1rem;
+  font-family: 'Poppins', sans-serif;
+
+  &:focus,
+  &:focus-visible {
+    border: 0.2rem solid $primary-color;
+    outline: none;
+  }
+}
