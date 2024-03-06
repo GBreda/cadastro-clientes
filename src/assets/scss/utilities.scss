@@ -1,0 +1,51 @@
+$gaps-map: (
+  1: 1rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem
+);
+
+@each $id, $value in $gaps-map {
+  .p-#{$id} {
+    padding: $value;
+  }
+
+  .pt-#{$id} {
+    padding-top: $value;
+  }
+
+  .pr-#{$id} {
+    padding-top: $value;
+  }
+
+  .pb-#{$id} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$id} {
+    padding-left: $value;
+  }
+}
+
+@each $id, $value in $gaps-map {
+  .m-#{$id} {
+    margin: $value;
+  }
+
+  .mt-#{$id} {
+    margin-top: $value;
+  }
+
+  .mr-#{$id} {
+    margin-top: $value;
+  }
+
+  .mb-#{$id} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$id} {
+    margin-left: $value;
+  }
+}

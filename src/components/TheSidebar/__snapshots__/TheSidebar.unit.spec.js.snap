@@ -8,6 +8,7 @@ exports[`TheSidebar > should match the snapshot 1`] = `
   
   <a
     class="sidebar__link"
+    data-test-id="sidebar-link"
     data-v-28ca5493=""
     href="/"
   >
@@ -15,6 +16,7 @@ exports[`TheSidebar > should match the snapshot 1`] = `
   </a>
   <a
     class="sidebar__link"
+    data-test-id="sidebar-link"
     data-v-28ca5493=""
     href="/lista-produtos"
   >
@@ -22,6 +24,7 @@ exports[`TheSidebar > should match the snapshot 1`] = `
   </a>
   <a
     class="sidebar__link"
+    data-test-id="sidebar-link"
     data-v-28ca5493=""
     href="/cadastro-cliente"
   >
@@ -29,6 +32,7 @@ exports[`TheSidebar > should match the snapshot 1`] = `
   </a>
   <a
     class="sidebar__link"
+    data-test-id="sidebar-link"
     data-v-28ca5493=""
     href="/cadastro-produto"
   >

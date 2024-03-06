@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContentContainer > should match the snapshot 1`] = `
+<div
+  class="content-container"
+>
+  <h1
+    class="pb-4"
+  >
+    título
+  </h1>
+  
+  
+</div>
+`;

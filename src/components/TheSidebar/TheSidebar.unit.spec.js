@@ -70,7 +70,7 @@ describe('TheSidebar', () => {
 
     await nextTick();
 
-    const link = wrapper.findAll('.sidebar__link[href="/"]')[0];
+    const link = wrapper.findAll('[data-test-id="sidebar-link"]')[0];
 
     expect(link.classes()).toContain('router-link-active');
   });

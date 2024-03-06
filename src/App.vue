@@ -1,5 +1,6 @@
 <template>
   <the-sidebar />
+
   <router-view />
 </template>
 

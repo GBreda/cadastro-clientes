@@ -4,6 +4,7 @@
       v-for="(item, index) in routesList"
       :key="index"
       class="sidebar__link"
+      data-test-id="sidebar-link"
       :to="{ name: item.name }"
     >
       {{ item.meta.friendlyName }}
@@ -27,8 +28,8 @@ const routesList = computed(() => router.options.routes);
   padding: 2rem;
   background-color: $light-gray;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  width: 30rem;
   min-height: 100vh;
+  min-width: 19.5rem;
 
   &__link {
     display: block;
