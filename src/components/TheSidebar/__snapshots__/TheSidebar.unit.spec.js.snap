@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TheSidebar > should match the snapshot 1`] = `
+<div
+  class="sidebar"
+  data-v-28ca5493=""
+>
+  
+  <a
+    class="sidebar__link"
+    data-v-28ca5493=""
+    href="/"
+  >
+    Lista de clientes
+  </a>
+  <a
+    class="sidebar__link"
+    data-v-28ca5493=""
+    href="/lista-produtos"
+  >
+    Lista de produtos
+  </a>
+  <a
+    class="sidebar__link"
+    data-v-28ca5493=""
+    href="/cadastro-cliente"
+  >
+    Cadastro de cliente
+  </a>
+  <a
+    class="sidebar__link"
+    data-v-28ca5493=""
+    href="/cadastro-produto"
+  >
+    Cadastro de produto
+  </a>
+  
+</div>
+`;
