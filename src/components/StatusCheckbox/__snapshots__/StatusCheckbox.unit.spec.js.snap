@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StatusCheckbox > should match the snapshot 1`] = `
+<div
+  class="d-flex align-items-center"
+>
+  <input
+    id="checkbox"
+    type="checkbox"
+  />
+  <label
+    for="checkbox"
+  >
+    Ativo
+  </label>
+</div>
+`;

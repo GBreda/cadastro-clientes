@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 
-import ContentContainer from './ContentContainer.vue';
+import ContentBox from './ContentBox.vue';
 
-const mountContentContainer = ({ slots } = {}) => {
-  return mount(ContentContainer, {
+const mountContentBox = ({ slots } = {}) => {
+  return mount(ContentBox, {
     props: {
       title: 'título'
     },
@@ -14,22 +14,22 @@ const mountContentContainer = ({ slots } = {}) => {
   });
 };
 
-describe('ContentContainer', () => {
+describe('ContentBox', () => {
   let wrapper;
   it('should mount the component', () => {
-    wrapper = mountContentContainer();
+    wrapper = mountContentBox();
 
     expect(wrapper.vm).toBeDefined();
   });
 
   it('should match the snapshot', () => {
-    wrapper = mountContentContainer();
+    wrapper = mountContentBox();
 
     expect(wrapper.element).toMatchSnapshot();
   });
 
   it('should render default slot content', () => {
-    const wrapper = mountContentContainer({
+    const wrapper = mountContentBox({
       slots: {
         default: '<div data-test-id="default">Custom Default Content</div>'
       }

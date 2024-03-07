@@ -21,14 +21,14 @@ label {
   font-weight: 600;
   font-size: 1.4rem;
   display: block;
-  margin-bottom: 0.5rem;
 }
 
-input {
+input[type='text'] {
   height: 3rem;
   border: 0.1rem solid $body-color;
   border-radius: 0.4rem;
   padding-left: 1rem;
+  padding-right: 1rem;
   font-family: 'Poppins', sans-serif;
 
   &:focus,
@@ -36,4 +36,18 @@ input {
     border: 0.2rem solid $primary-color;
     outline: none;
   }
+}
+
+input[type='checkbox'] {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.1rem solid $body-color;
+  border-radius: 0.2rem;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type='checkbox']:checked {
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
