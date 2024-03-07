@@ -1,6 +1,6 @@
 <template>
   <label for="text-field" data-test-id="label">{{ label }}</label>
-  <input :type="type" name="text-field" data-test-id="input" v-model="value" />
+  <input :value="value" :type="type" name="text-field" data-test-id="input" @input="updateValue" />
 </template>
 
 <script setup>
@@ -15,8 +15,18 @@ defineProps({
     validator(value) {
       return ['email', 'number', 'tel', 'text'].includes(value);
     }
+  },
+  value: {
+    type: String,
+    required: true
   }
 });
 
-const value = defineModel();
+const emit = defineEmits(['update:value']);
+
+const updateValue = (event) => {
+  const { value } = event.target;
+
+  emit('update:value', value);
+};
 </script>

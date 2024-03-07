@@ -6,7 +6,8 @@ import TextField from './TextField.vue';
 const mountTextField = () => {
   return mount(TextField, {
     props: {
-      label: 'Input label'
+      label: 'Input label',
+      value: 'produto'
     }
   });
 };
@@ -36,11 +37,29 @@ describe('TextField', () => {
     expect(label.html()).toContain('Custom label');
   });
 
-  it('should have the prop type with the value text as default', () => {
+  it('should have proper type attribute according to prop', async () => {
     wrapper = mountTextField();
 
     const input = wrapper.find('[data-test-id="input"]');
-
     expect(input.attributes('type')).toBe('text');
+
+    await wrapper.setProps({ type: 'email' });
+    expect(input.attributes('type')).toBe('email');
+
+    await wrapper.setProps({ type: 'number' });
+    expect(input.attributes('type')).toBe('number');
+
+    await wrapper.setProps({ type: 'tel' });
+    expect(input.attributes('type')).toBe('tel');
+  });
+
+  it('should update value when input changes', async () => {
+    wrapper = mountTextField();
+
+    const input = wrapper.find('[data-test-id="input"]');
+    await input.setValue('New value');
+
+    expect(wrapper.emitted('update:value')).toBeTruthy();
+    expect(wrapper.emitted('update:value')[0]).toEqual(['New value']);
   });
 });
